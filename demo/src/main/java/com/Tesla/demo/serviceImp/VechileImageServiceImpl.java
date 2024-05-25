@@ -1,6 +1,5 @@
 package com.Tesla.demo.serviceImp;
 
-
 import com.Tesla.demo.Entity.VechileImage;
 import com.Tesla.demo.repo.VechileImageRepository;
 import com.Tesla.demo.service.VechileImageService;
@@ -23,5 +22,10 @@ public class VechileImageServiceImpl implements VechileImageService {
     @Override
     public List<VechileImage> getAllVechileImages() {
         return vechileImageRepository.findAll();
+    }
+
+    @Override
+    public VechileImage saveVechileImage(VechileImage vechileImage) {
+        return vechileImageRepository.save(vechileImage);
     }
 }

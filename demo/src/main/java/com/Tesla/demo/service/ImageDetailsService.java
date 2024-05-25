@@ -6,4 +6,5 @@ import java.util.List;
 public interface ImageDetailsService {
     ImageDetails getImageDetailsById(Long id);
     List<ImageDetails> getAllImageDetails();
+    ImageDetails saveImageDetails(ImageDetails imageDetails);  // Added method
 }

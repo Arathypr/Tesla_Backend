@@ -11,9 +11,10 @@ public class VechileImage {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long vechicleImageId;
-    private Byte image;
+    private byte[] image;
+    private Long vechileId; // Field for vehicle ID
 
-    // Getters and setters (or use Lombok @Data annotation if preferred)
+    // Getters and setters
     public Long getVechicleImageId() {
         return vechicleImageId;
     }
@@ -22,11 +23,19 @@ public class VechileImage {
         this.vechicleImageId = vechicleImageId;
     }
 
-    public Byte getImage() {
+    public byte[] getImage() {
         return image;
     }
 
-    public void setImage(Byte image) {
+    public void setImage(byte[] image) {
         this.image = image;
+    }
+
+    public Long getVechileId() {
+        return vechileId;
+    }
+
+    public void setVechileId(Long vechileId) {
+        this.vechileId = vechileId;
     }
 }

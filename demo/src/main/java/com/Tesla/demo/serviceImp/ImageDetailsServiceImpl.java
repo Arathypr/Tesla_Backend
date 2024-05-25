@@ -1,6 +1,4 @@
 package com.Tesla.demo.serviceImp;
-
-
 import com.Tesla.demo.Entity.ImageDetails;
 import com.Tesla.demo.repo.ImageDetailsRepository;
 import com.Tesla.demo.service.ImageDetailsService;
@@ -23,5 +21,10 @@ public class ImageDetailsServiceImpl implements ImageDetailsService {
     @Override
     public List<ImageDetails> getAllImageDetails() {
         return imageDetailsRepository.findAll();
+    }
+
+    @Override
+    public ImageDetails saveImageDetails(ImageDetails imageDetails) {
+        return imageDetailsRepository.save(imageDetails);
     }
 }

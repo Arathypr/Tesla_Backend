@@ -1,6 +1,5 @@
 package com.Tesla.demo.controller;
 
-
 import com.Tesla.demo.Entity.ImageDetails;
 import com.Tesla.demo.service.ImageDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,5 +25,11 @@ public class ImageDetailsController {
     public ResponseEntity<List<ImageDetails>> getAllImageDetails() {
         List<ImageDetails> imageDetailsList = imageDetailsService.getAllImageDetails();
         return ResponseEntity.ok(imageDetailsList);
+    }
+
+    @PostMapping
+    public ResponseEntity<ImageDetails> createImageDetails(@RequestBody ImageDetails imageDetails) {
+        ImageDetails createdImageDetails = imageDetailsService.saveImageDetails(imageDetails);
+        return ResponseEntity.ok(createdImageDetails);
     }
 }
